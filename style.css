@@ -137,6 +137,18 @@ footer {
     background: #fff;
 }
 
+.map-section, .card-section, .list-section {
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), 
+    box-shadow 0.25s cubic-bezier(0.4,0,0.2,1), background-color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.map-section:hover, .card-section:hover, .list-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    background-color: #66666623;
+    /* outline: 2px solid #bdbdbd; */
+    z-index: 1;
+}
 
 @media (min-width: 600px) and (max-width: 900px) {
   .map-section,
