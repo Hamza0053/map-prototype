@@ -29,7 +29,7 @@ body {
 }
 
 .map-section {
-    padding: 60px 60px;
+    padding: 50px;
     border-right: 2px solid #ccc;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ body {
 
 .mainHeading {
     font-size: 2.8rem;
-    color: #666;
+    color: #6b6b6b;
     margin: 0 0 24px 0;
     font-weight: 600;
 }
@@ -59,7 +59,7 @@ body {
     font-size: 1.3rem;
     line-height: 2.2rem;
     margin: 0 0 16px 0;
-    color: #666;
+    color: #6b6b6b;
     font-weight: 600;
 }
 /* Chrome only */
@@ -79,13 +79,28 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 0;
 }
 
-.card-section,
+
 .list-section {
-    flex: 1;
-    padding: 60px 60px;
+    flex: 1 1 0;
+    box-sizing: border-box;
+    padding: 50px;
     border-bottom: 2px solid #ccc;
+}
+
+.card-section {
+    flex: 1 1 0;
+    box-sizing: border-box;
+    padding: 50px;
+    border-bottom: 2px solid #ccc;
+    max-height: 220px;
+}
+
+.card-section  .mainHeading{
+    margin-bottom: 10px;
+
 }
 
 .card-section {
@@ -120,4 +135,50 @@ footer {
     color: #666;
     border-top: 1px solid #ccc;
     background: #fff;
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .map-section,
+  .card-section,
+  .list-section {
+    padding: 30px 30px;
+  }
+  .mainHeading {
+    font-size: 2rem;
+  }
+  .map-section h2 {
+    font-size: 1.2rem;
+  }
+  .para {
+    font-size: 1.2rem;
+    line-height: 1.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainHeading {
+    font-size: 1.5rem;
+  }
+  .map-section h2 {
+    font-size: 1rem;
+  }
+  .para {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .map-section, .card-section, .list-section {
+    padding: 20px 20px;
+  }
+  footer {
+    font-size: 0.95rem;
+    padding: 10px 8px;
+  }
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .side {
+    flex-direction: column;
+  }
 }
